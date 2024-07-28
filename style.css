@@ -1,0 +1,25 @@
+*
+{
+    overflow: hidden;
+}
+
+body
+{
+    background-image: url("paper.png");
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+#currentColor
+{
+    height: 16px;
+    width: 100%;
+    background-color: black;
+}
+
+#settingsMenu
+{
+    position: fixed;
+    background-image: url("yellow_paper.png");
+}

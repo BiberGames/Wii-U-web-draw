@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw for Wii U</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--<a id="touch"></a>-->
+    <button id="settingsMenu" disabled="">
+        <div>
+            <br>
+            Pen
+            <br>
+            <input type="range" min="1" max="100" value="10" class="slider" id="penRadius"> <input type="number" id="penRadiusValue" disabled="">
+            <br>
+            <input type="button" onclick="setMode(0)" id="drawMode" value="Pen">
+            <input type="button" onclick="setMode(1)" id="eraceMode" value="Eracer">
+            <input type="button" onclick="setMode(2)" id="colorPickerMode" value="Pipette">
+            <br>
+            <br>
+            ═══════════════════════
+            <br>
+            Color
+            <br>
+            <div id="currentColor"></div>
+            <input type="range" min="0" max="255" value="128" class="slider" id="r"> <input type="number" id="rValue" disabled="">
+            <br>
+            <input type="range" min="0" max="255" value="128" class="slider" id="g"> <input type="number" id="gValue" disabled="">
+            <br>
+            <input type="range" min="0" max="255" value="128" class="slider" id="b"> <input type="number" id="bValue" disabled="">
+            <br>
+            <br>
+            ═══════════════════════
+            <br>
+            <br>
+            <form method="post">
+                <input type="submit" name="saveCanvas" onclick="saveDrawingCanvas()" id="saveImage" value="Save">
+                <input type="button" onclick="loadDrawingCanvas()" id="loadImage" value="Load">
+            </form>
+            <br>
+            <input type="button" onclick="clearDrawingCanvas()" id="clearImage" value="Clear Canvas" disabled="">
+        </div>
+    </button>
+    <canvas id="drawingCanvas" width="850" height="445">Canvas not supported in your browser.</canvas>
+    <script src="draw.js"></script>
+    <!--<script src="draw.js"></script>-->
+</body>
+</html>
